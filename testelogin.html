@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/teste.css">
+    <script src="js/buttons.js"></script>
+</head>
+<body>
+    <header class="header">
+    
+        <div class="login-area">
+            <button class="login-button" onclick="openLoginModal()">Login</button>
+        </div>
+    </header>
+    
+    <!-- Modal de Login -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLoginModal()">&times;</span>
+            <h2>Login</h2>
+            <form action="#" method="POST">
+                <div class="input-group">
+                    <label for="login-email">Email*</label>
+                    <input type="email" id="login-email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="login-password">Senha*</label>
+                    <input type="password" id="login-password" name="password" required>
+                </div>
+                <button type="submit" class="submit-button">Entrar</button>
+            </form>
+        </div>
+    </div>
+    
+    </header>
+
+    <main>
+       <script>function openLoginModal() {
+        document.getElementById('loginModal').style.display = 'block';
+    }
+    
+    function closeLoginModal() {
+        document.getElementById('loginModal').style.display = 'none';
+    }
+    
+    // Fecha o modal quando o usuário clica fora dele
+    window.onclick = function(event) {
+        const modal = document.getElementById('loginModal');
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+    </script>
+
+    </main>
+
+</body>
+</html>
